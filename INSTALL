@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby -wKU
+
+# A simple ruby install script for all these handy git helpers
+# Ensure that this file gets 755 or -x permissions
+# Then run: 
+#   
+#   cd git-utils # if you're not already in it
+#   ./INSTALL # ./INSTALL -v for verbose mode
+
+fpath = File.expand_path(File.dirname(__FILE__))
+path_ary = fpath.split("/")
+gdir = path_ary.pop
+directory = path_ary.join "/"
+cmds = Dir.glob("git-*")
+
+cmds.each do |cmd|
+  puts "installing #{cmd}..." if ARGV[0] == "-v"
+  system "cd #{directory}; ln -nfs #{gdir}/#{cmd} #{cmd}"
+end
+
+puts "---\n#{cmds.length} git commands installed!"
+
+
+
