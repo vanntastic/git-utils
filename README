@@ -16,4 +16,14 @@ git-wip              # store your existing changes as a "work in progress" commi
 git-unwip            # run this after rebasing to turn the wip commit back into unstaged changes
 git-wtf              # show the current status of your git repository, including feature branches
 
+Easy Installation
+-----------------
+
+To easily install all these commands, simply run:
+
+
+    cd git-utils # or whatever you named this directory
+    ./INSTALL # you can run ./INSTALL -v for verbose mode
+
+    
 Many of these scripts come from http://github.com/jwiegley/git-scripts
