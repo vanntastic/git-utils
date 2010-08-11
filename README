@@ -19,7 +19,7 @@ git-wtf              # show the current status of your git repository, including
 Easy Installation
 -----------------
 
-To easily install all these commands, simply run:
+Assuming git-utils is somewhere in your $PATH, you can easily install all these commands, simply run:
 
 
     cd git-utils # or whatever you named this directory

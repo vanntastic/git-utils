@@ -1,11 +1,15 @@
 #!/usr/bin/env ruby -wKU
 
 # A simple ruby install script for all these handy git helpers
+# Assuming the git-utils directory is somewhere in your $PATH
+
 # Ensure that this file gets 755 or -x permissions
 # Then run: 
 #   
 #   cd git-utils # if you're not already in it
 #   ./INSTALL # ./INSTALL -v for verbose mode
+
+# By: Vann Ek, <github.com/vanntastic>
 
 fpath = File.expand_path(File.dirname(__FILE__))
 path_ary = fpath.split("/")
