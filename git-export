@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby -wKU
+
+# git-export : Like svn export, but for git
+# USAGE : git-export [repo url] [optional destination]
+
+# By: Vann Ek, <github.com/vanntastic>
+
+REPO = ARGV[0]
+DEST = ARGV[1].nil? ? File.expand_path(".") : File.join(File.expand_path("."), ARGV[1])
+
+if REPO.nil?
+  puts "git-export [repo url] [optional destination]"
+else
+  name = REPO.split("/").last.split(".").first
+  dest = File.join(DEST, name)
+  system "git clone #{REPO} #{dest}"
+  system "rm -rf #{File.join(dest,'.git')}"
+  puts "Repository : #{REPO} exported to #{dest}!"
+end
