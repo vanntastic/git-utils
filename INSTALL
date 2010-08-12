@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby -wKU
 
-# A simple ruby install script for all these handy git helpers
+# A simple ruby install script for all these handy git helpers, you can also use this to re-link commands
 # Assuming the git-utils directory is somewhere in your $PATH
 
 # Ensure that this file gets 755 or -x permissions
