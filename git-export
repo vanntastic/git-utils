@@ -15,5 +15,5 @@ else
   dest = File.join(DEST, name)
   system "git clone #{REPO} #{dest}"
   system "rm -rf #{File.join(dest,'.git')}"
-  puts "Repository : #{REPO} exported to #{dest}!"
+  puts "Repository : #{REPO} exported to #{dest}"
 end
