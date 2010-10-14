@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Compares differences between 2 branches
+
+if [[ -n "$1" ]]; then
+  git diff --name-status $1..$2
+else
+  echo "USAGE : git-diff-branches [branch1] [branch2]"
+fi
