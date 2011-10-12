@@ -3,7 +3,11 @@
 # Compares differences between 2 branches
 
 if [[ -n "$1" ]]; then
-  git diff --name-status $1..$2
+  if [[ -n "$3" ]]; then
+    git log --name-status --graph $1..$2
+  else
+    git diff --name-status $1..$2
+  fi
 else
-  echo "USAGE : git-diff-branches [branch1] [branch2]"
+  echo "USAGE : git-diff-branches [branch1] [branch2] <-detail>"
 fi
